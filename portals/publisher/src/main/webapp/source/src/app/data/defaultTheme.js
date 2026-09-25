@@ -108,7 +108,7 @@ export default {
         }
     },
     typography: {
-        fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+        fontFamily: '"Vazirmatn", "Open Sans", "Helvetica", "Arial", sans-serif',
         fontSize: 12,
         subtitle2: {
             fontWeight: 600,
@@ -132,6 +132,35 @@ export default {
         logo: '/site/public/images/logo.svg',
         logoHeight: 40,
         logoWidth: 222,
+        languageSwitch: {
+            active: true,
+            languages: [
+                {
+                    key: 'en',
+                    image: '/site/public/images/flags/en.png',
+                    imageWidth: 24,
+                    text: 'English',
+                    direction: 'ltr',
+                },
+                {
+                    key: 'fr',
+                    image: '/site/public/images/flags/fr.png',
+                    imageWidth: 24,
+                    text: 'Français',
+                    direction: 'ltr',
+                },
+                {
+                    key: 'fa',
+                    image: '/site/public/images/flags/ir.png',
+                    imageWidth: 24,
+                    text: 'فارسی',
+                    direction: 'rtl',
+                },
+            ],
+            showFlag: true,
+            showText: true,
+            minWidth: 60,
+        },
         defaultApiView: 'grid', /* Sets the default view for the api listing page ( Other values available = 'list' )
                                                 To disable one option for an example if you want to disable grid
                                                 completely and get rid of the toggle buttons use ['list']. */

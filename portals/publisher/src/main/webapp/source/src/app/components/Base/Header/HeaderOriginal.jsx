@@ -14,6 +14,7 @@ import Configurations from 'Config';
 import HeaderSearch from 'AppComponents/Base/Header/headersearch/HeaderSearch';
 import GlobalNavBar from 'AppComponents/Base/Header/navbar/GlobalNavBar';
 import { GlobalDrawerProvider } from 'AppComponents/Base/Header/navbar/useNavBar';
+import LanguageSelector from 'AppComponents/Base/Header/LanguageSelector';
 
 
 const PREFIX = 'HeaderOriginal';
@@ -110,6 +111,7 @@ export default function HeaderOriginal(props) {
                                 </Hidden>
                                 <div style={{ paddingTop: 6}}>
                                     {menuItems}
+                                    <LanguageSelector />
                                     {avatar || <Avatar user={user} />}
                                 </div>
                             </Box>

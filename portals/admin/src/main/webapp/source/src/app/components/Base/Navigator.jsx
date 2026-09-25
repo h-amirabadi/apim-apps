@@ -31,6 +31,7 @@ const classes = {
 };
 
 const StyledDrawer = styled(Drawer)(({ theme }) => ({
+    direction: 'inherit',
     [`& .${classes.categoryHeader}`]: {
         paddingTop: theme.spacing(1),
         paddingBottom: theme.spacing(1),
@@ -67,7 +68,7 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 
     [`& .${classes.itemIcon}`]: {
         minWidth: 'auto',
-        marginRight: theme.spacing(2),
+        marginInlineEnd: theme.spacing(2),
     },
 
     [`& .${classes.divider}`]: {
@@ -234,9 +235,10 @@ function Navigator(props) {
         logoHeight = theme.custom.logoHeight;
     }
 
+    const isRtl = document.body.getAttribute('dir') === 'rtl';
     return (
         // eslint-disable-next-line react/jsx-props-no-spreading
-        <StyledDrawer variant='permanent' {...other}>
+        <StyledDrawer variant='permanent' anchor={isRtl ? 'right' : 'left'} {...other}>
             <List disablePadding role='list'>
                 <ListItem className={clsx(classes.firebase, classes.item, 'itemCategory', classes.logoWrapper)}>
                     <Link component={RouterLink} to='/' underline='hover'>

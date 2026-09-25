@@ -37,15 +37,38 @@ import LoginDenied from './app/LoginDenied';
 const ProtectedApp = lazy(() => import('./app/ProtectedApp' /* webpackChunkName: "ProtectedApps" */));
 
 /**
- * Language.
- * @type {string}
+ * Resolve the active language, preferring localStorage (set by the language switcher)
+ * over the browser locale.
+ * @returns {{locale: string, direction: string}}
  */
-const language = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage;
+function resolveActiveLanguage() {
+    const defaultLanguages = [
+        { key: 'en', direction: 'ltr' },
+        { key: 'si', direction: 'ltr' },
+        { key: 'fr', direction: 'ltr' },
+        { key: 'fa', direction: 'rtl' },
+    ];
+    const browserLanguage = (navigator.languages && navigator.languages[0])
+        || navigator.language || navigator.userLanguage;
+    const browserLanguageWithoutRegionCode = browserLanguage.toLowerCase().split(/[_-]+/)[0];
 
-/**
- * Language without region code.
- */
-const languageWithoutRegionCode = language.toLowerCase().split(/[_-]+/)[0];
+    let selectedLanguage = null;
+    const savedLanguage = localStorage.getItem('language');
+    for (let i = 0; i < defaultLanguages.length; i++) {
+        if (savedLanguage && savedLanguage === defaultLanguages[i].key) {
+            selectedLanguage = defaultLanguages[i];
+        } else if (!savedLanguage && browserLanguageWithoutRegionCode === defaultLanguages[i].key) {
+            selectedLanguage = defaultLanguages[i];
+        }
+    }
+    if (!selectedLanguage) {
+        selectedLanguage = { key: browserLanguageWithoutRegionCode, direction: 'ltr' };
+    }
+    return { locale: selectedLanguage.key, direction: selectedLanguage.direction };
+}
+
+const { locale: language, direction: languageDirection } = resolveActiveLanguage();
+const languageWithoutRegionCode = language;
 
 /**
  * Define base routes for the application
@@ -78,6 +101,7 @@ class Admin extends React.Component {
      */
     componentDidMount() {
         const locale = languageWithoutRegionCode || language;
+        document.body.setAttribute('dir', languageDirection);
         this.loadLocale(locale);
         const user = AuthManager.getUser();
         if (user) {

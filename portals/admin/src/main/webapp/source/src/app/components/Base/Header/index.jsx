@@ -24,6 +24,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Breadcrumbs from 'AppComponents/Base/Header/Breadcrumbs';
+import LanguageSelector from 'AppComponents/Base/Header/LanguageSelector';
 
 /**
  * Render header component
@@ -52,6 +53,9 @@ function Header(props) {
                     </Hidden>
                     <Breadcrumbs />
                     <Grid item xs />
+                    <Grid item>
+                        <LanguageSelector />
+                    </Grid>
                     <Grid item>
                         {avatar}
                         {/* <IconButton color="inherit" className={classes.iconButtonAvatar}>

@@ -30,7 +30,7 @@ const AppThemes = {
             },
         },
         typography: {
-            fontFamily: '"Open Sans", "Helvetica", "Arial", sans-serif',
+            fontFamily: '"Vazirmatn", "Open Sans", "Helvetica", "Arial", sans-serif',
             fontSize: 12,
             subtitle2: {
                 fontWeight: 600,
@@ -62,6 +62,42 @@ const AppThemes = {
             drawerWidth: 256,
             logo: '/site/public/images/logo.svg',
             logoWidth: 180,
+            languageSwitch: {
+                active: true,
+                languages: [
+                    {
+                        key: 'en',
+                        image: '/site/public/images/flags/en.png',
+                        imageWidth: 24,
+                        text: 'English',
+                        direction: 'ltr',
+                    },
+                    {
+                        key: 'si',
+                        image: '/site/public/images/flags/si.png',
+                        imageWidth: 24,
+                        text: 'Sinhala',
+                        direction: 'ltr',
+                    },
+                    {
+                        key: 'fr',
+                        image: '/site/public/images/flags/fr.png',
+                        imageWidth: 24,
+                        text: 'Français',
+                        direction: 'ltr',
+                    },
+                    {
+                        key: 'fa',
+                        image: '/site/public/images/flags/ir.png',
+                        imageWidth: 24,
+                        text: 'فارسی',
+                        direction: 'rtl',
+                    },
+                ],
+                showFlag: true,
+                showText: true,
+                minWidth: 60,
+            },
         },
         overrides: {
             MuiRadio: {

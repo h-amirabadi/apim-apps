@@ -42,6 +42,7 @@ const Root = styled('div')(({ theme }) => ({
     },
 
     [`& .${classes.drawer}`]: {
+        direction: 'inherit',
         width: theme.custom.globalNavBar.opened.drawerWidth,
         flexShrink: 0,
         whiteSpace: 'nowrap',
@@ -115,6 +116,7 @@ const GlobalNavBar = (props) => {
         <Root>
             <Drawer
                 variant={isRootPage ? 'permanent' : 'temporary'}
+                anchor={document.body.getAttribute('dir') === 'rtl' ? 'right' : 'left'}
                 className={clsx(classes.drawer, {
                     [classes.drawerOpen]: open,
                     [classes.drawerClose]: !open,
