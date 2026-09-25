@@ -26,6 +26,11 @@ import {
     adaptV4Theme,
     ThemeProvider as NormalThemeProvider
 } from '@mui/material/styles';
+import { CacheProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
+import { prefixer } from 'stylis';
+import rtlPlugin from 'stylis-plugin-rtl';
+import merge from 'lodash/merge';
 import PublisherLanding from 'AppComponents/PublisherLanding'
 import ResourceNotFound from 'AppComponents/Base/Errors/ResourceNotFound';
 import Base from 'AppComponents/Base';
@@ -45,9 +50,20 @@ import Subscription from 'AppComponents/Subscription/Subscription';
 import CommonPolicies from 'AppComponents/CommonPolicies/CommonPolicies';
 import GlobalPolicies from 'AppComponents/GlobalPolicies/GlobalPolicies';
 import SessionTimeout from 'AppComponents/SessionTimeout';
-import merge from 'lodash/merge';
 import User from './data/User';
 import Utils from './data/Utils';
+
+const cacheRtl = createCache({
+    key: 'publisherrtl',
+    prepend: true,
+    stylisPlugins: [prefixer, rtlPlugin],
+});
+
+const cacheLtr = createCache({
+    key: 'publisherltr',
+    prepend: true,
+    stylisPlugins: [prefixer],
+});
 
 const ThemeProvider = CoreThemeProvider || NormalThemeProvider;
 const Apis = lazy(() => import('AppComponents/Apis/Apis' /* webpackChunkName: "DeferredAPIs" */));
@@ -204,39 +220,43 @@ export default class Protected extends Component {
         }
 
         const adaptedTheme = createTheme(adaptV4Theme(defaultTheme));
-        const effectiveTheme = createTheme(
-            merge(adaptedTheme, (typeof theme === 'function' ? theme(adaptedTheme) : theme)));
+        const effectiveTheme = createTheme({
+            ...merge(adaptedTheme, (typeof theme === 'function' ? theme(adaptedTheme) : theme)),
+            direction: language === 'fa' ? 'rtl' : 'ltr',
+        });
 
         return (
             <StyledEngineProvider injectFirst>
                 <ThemeProvider theme={effectiveTheme}>
-                    <AppErrorBoundary>
-                        <QueryClientProviderX>
-                            <Base user={user}>
-                                <SessionTimeout />
-                                <AppContextProvider value={{
-                                    user,
-                                    settings,
-                                    updateSettings: this.updateSettings,
-                                }}
-                                >
-                                    <Switch>
-                                        <Route path='/' exact component={PublisherLanding} />
-                                        <Route path='/search' component={DeferredAPIs} />
-                                        <Route path='/apis' component={DeferredAPIs} />
-                                        <Route path='/api-products' component={DeferredAPIs} />
-                                        <Route path='/mcp-servers' component={DeferredAPIs} />
-                                        <Route path='/scopes' component={Scopes} />
-                                        <Route path='/subscription' component={Subscription} />
-                                        <Route path='/policies' component={CommonPolicies} />
-                                        <Route path='/global-policies' component={GlobalPolicies} />
-                                        <Route path='/service-catalog' component={ServiceCatalogRouting} />
-                                        <Route component={ResourceNotFound} />
-                                    </Switch>
-                                </AppContextProvider>
-                            </Base>
-                        </QueryClientProviderX>
-                    </AppErrorBoundary>
+                    <CacheProvider value={effectiveTheme.direction === 'rtl' ? cacheRtl : cacheLtr}>
+                        <AppErrorBoundary>
+                            <QueryClientProviderX>
+                                <Base user={user}>
+                                    <SessionTimeout />
+                                    <AppContextProvider value={{
+                                        user,
+                                        settings,
+                                        updateSettings: this.updateSettings,
+                                    }}
+                                    >
+                                        <Switch>
+                                            <Route path='/' exact component={PublisherLanding} />
+                                            <Route path='/search' component={DeferredAPIs} />
+                                            <Route path='/apis' component={DeferredAPIs} />
+                                            <Route path='/api-products' component={DeferredAPIs} />
+                                            <Route path='/mcp-servers' component={DeferredAPIs} />
+                                            <Route path='/scopes' component={Scopes} />
+                                            <Route path='/subscription' component={Subscription} />
+                                            <Route path='/policies' component={CommonPolicies} />
+                                            <Route path='/global-policies' component={GlobalPolicies} />
+                                            <Route path='/service-catalog' component={ServiceCatalogRouting} />
+                                            <Route component={ResourceNotFound} />
+                                        </Switch>
+                                    </AppContextProvider>
+                                </Base>
+                            </QueryClientProviderX>
+                        </AppErrorBoundary>
+                    </CacheProvider>
                 </ThemeProvider>
             </StyledEngineProvider>
         );

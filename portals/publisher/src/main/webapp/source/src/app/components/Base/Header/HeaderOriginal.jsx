@@ -1,5 +1,6 @@
 import React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
+import { useIntl } from 'react-intl';
 import AppBar from '@mui/material/AppBar';
 import { Toolbar } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
@@ -47,6 +48,8 @@ const Root = styled('div')(({ theme }) => ({
 
     [`& .${classes.toolbarStyles}`]: {
         minHeight: theme.spacing(8),
+        paddingInline: theme.spacing(2),
+        gap: theme.spacing(1),
     },
 }));
 
@@ -56,6 +59,8 @@ const Root = styled('div')(({ theme }) => ({
 export default function HeaderOriginal(props) {
     const { avatar, menuItems, user } = props;
     const theme = useTheme();
+    const { locale } = useIntl();
+    const isRtl = locale === 'fa';
     const [open, setOpen] = React.useState(false);
     const [openMiniSearch, setOpenMiniSearch] = React.useState(false);
     const toggleMiniSearch = () => { setOpenMiniSearch(!openMiniSearch); };
@@ -74,7 +79,7 @@ export default function HeaderOriginal(props) {
                         <IconButton
                             aria-label='Expand publisher landing page drawer'
                             onClick={handleDrawerToggle}
-                            edge='start'
+                            edge={isRtl ? 'end' : 'start'}
                             size='large'>
                             <Icon
                                 fontSize='large'
@@ -83,7 +88,7 @@ export default function HeaderOriginal(props) {
                             />
                         </IconButton>
                         <Box display='flex' justifyContent='space-between' flexDirection='row' width={1}>
-                            <Box display='flex' sx={{ pt: '4px' }}>
+                            <Box display='flex' alignItems='center' sx={{ pt: '4px', minWidth: 0 }}>
                                 <Link to='/' aria-label='Go to home page'>
                                     <img
                                         src={Configurations.app.context + theme.custom.logo}
@@ -92,7 +97,7 @@ export default function HeaderOriginal(props) {
                                     />
                                 </Link>
                             </Box>
-                            <Box display='flex'>
+                            <Box display='flex' alignItems='center' sx={{ minWidth: 0 }}>
                                 <Hidden mdDown>
                                     <HeaderSearch />
                                 </Hidden>
@@ -109,7 +114,7 @@ export default function HeaderOriginal(props) {
                                             <HeaderSearch toggleSmSearch={toggleMiniSearch} smSearch={openMiniSearch} />
                                         )}
                                 </Hidden>
-                                <div style={{ paddingTop: 6}}>
+                                <div style={{ display: 'flex', alignItems: 'center', paddingTop: 0 }}>
                                     {menuItems}
                                     <LanguageSelector />
                                     {avatar || <Avatar user={user} />}

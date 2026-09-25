@@ -55,7 +55,7 @@ const Root = styled('div')(({ theme }) => ({
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.enteringScreen,
         }),
-        backgroundColor: 'green',
+        backgroundColor: theme.palette.background.drawer,
     },
 
     [`& .${classes.drawerClose}`]: {
@@ -84,12 +84,17 @@ const Root = styled('div')(({ theme }) => ({
     [`& .${classes.drawerCommon}`]: {
         top: theme.spacing(8),
     },
+
+    '& .MuiDrawer-paper': {
+        boxSizing: 'border-box',
+    },
 }));
 
 const GlobalNavBar = (props) => {
     const { open, setOpen } = props;
 
     const theme = useTheme();
+    const isRtl = theme.direction === 'rtl';
     const drawerCommon = { class: classes.drawerCommon };
     const location = useLocation();
 
@@ -116,7 +121,7 @@ const GlobalNavBar = (props) => {
         <Root>
             <Drawer
                 variant={isRootPage ? 'permanent' : 'temporary'}
-                anchor={document.body.getAttribute('dir') === 'rtl' ? 'right' : 'left'}
+                anchor={isRtl ? 'right' : 'left'}
                 className={clsx(classes.drawer, {
                     [classes.drawerOpen]: open,
                     [classes.drawerClose]: !open,

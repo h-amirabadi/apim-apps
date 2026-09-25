@@ -61,18 +61,18 @@ const StyledLink = styled(Link)((
     },
 
     [`& .${classes.smallIcon}`]: {
-        marginRight: 5,
+        marginInlineEnd: 5,
         minWidth: 'auto',
     },
 
     [`& .${classes.selected}`]: {
         background: '#868686b5',
-        borderLeft: '2px solid',
+        borderInlineStart: '2px solid',
         color: '#f9f9f9',
     },
 
     [`& .${classes.notSelected}`]: {
-        borderLeft: '2px solid',
+        borderInlineStart: '2px solid',
         color: '#18202c',
     },
 
@@ -115,7 +115,7 @@ const StyledLink = styled(Link)((
 
     [`& .${classes.itemIcon}`]: {
         minWidth: 'auto',
-        marginRight: theme.spacing(2),
+        marginInlineEnd: theme.spacing(2),
     },
 
     [`& .${classes.arrow}`]: {

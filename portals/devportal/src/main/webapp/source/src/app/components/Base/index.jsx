@@ -99,9 +99,10 @@ const Root = styled('div')((
             backgroundColor: theme.custom.appBar.background,
             backgroundImage: `url(${app.context}${theme.custom.appBar.backgroundImage})`,
             backgroundRepeat: 'no-repeat',
+            direction: theme.direction,
         },
         [`& .${classes.icon}`]: {
-            marginRight: theme.spacing(2),
+            marginInlineEnd: theme.spacing(2),
         },
         [`& .${classes.menuIcon}`]: {
             color: theme.palette.getContrastText(theme.custom.appBar.background),
@@ -116,11 +117,13 @@ const Root = styled('div')((
         },
         [`& .${classes.linkWrapper}`]: {
             display: 'flex',
-            marginLeft: 'auto',
+            marginInlineStart: 'auto',
         },
         // Page layout styles
         [`& .${classes.drawer}`]: {
             top: 64,
+            insetInlineStart: 0,
+            insetInlineEnd: 'auto',
         },
         [`& .${classes.wrapper}`]: {
             minHeight: '100%',
@@ -134,7 +137,7 @@ const Root = styled('div')((
             overflowX: 'hidden',
             position: 'relative',
             minHeight: theme.custom.banner.active ? `calc(100vh - ${64 + footerHeight}px)` : `calc(100vh - ${footerHeight}px)`,
-            marginLeft: -4,
+            marginInlineStart: -4,
             marginTop: theme.custom.banner.active ? 0 : '64px',
         },
         [`& .${classes.push}`]: {
@@ -143,7 +146,7 @@ const Root = styled('div')((
         [`& .${classes.footer}`]: {
             background: theme.custom.footer.background,
             color: theme.custom.footer.color,
-            paddingLeft: theme.spacing(3),
+            paddingInlineStart: theme.spacing(3),
             height: theme.custom.footer.height || 50,
             alignItems: 'center',
             display: 'flex',
@@ -172,11 +175,11 @@ const Root = styled('div')((
         [`& .${classes.reactRoot}`]: {
             maxWidth: pageMaxWidth,
             margin: 'auto',
-            borderLeft: theme.custom.page.border,
-            borderRight: theme.custom.page.border,
+            borderInlineStart: theme.custom.page.border,
+            borderInlineEnd: theme.custom.page.border,
         },
         [`& .${classes.icons}`]: {
-            marginRight: theme.spacing(),
+            marginInlineEnd: theme.spacing(),
             '&.material-icons': {
                 fontSize: theme.spacing(2),
             },
@@ -216,7 +219,7 @@ const Root = styled('div')((
             color: theme.palette.getContrastText(theme.custom.appBar.background),
         },
         [`& .${classes.smallIcon}`]: {
-            marginRight: 5,
+            marginInlineEnd: 5,
             minWidth: 'auto',
         },
         [`& .${classes.links}`]: {
@@ -565,6 +568,7 @@ class LayoutLegacy extends React.Component {
                                 <Hidden mdUp>
                                     <Drawer
                                         className={classes.drawerStyles}
+                                        anchor={theme.direction === 'rtl' ? 'right' : 'left'}
                                         PaperProps={paperStyles}
                                         SlideProps={commonStyle}
                                         ModalProps={commonStyle}

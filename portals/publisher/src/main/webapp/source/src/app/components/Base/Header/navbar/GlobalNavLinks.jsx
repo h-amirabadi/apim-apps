@@ -44,7 +44,7 @@ const StyledBox = styled(Box)((
     },
 
     [`& .${classes.externalLinkIcon}`]: {
-        marginLeft: theme.spacing(1),
+        marginInlineStart: theme.spacing(1),
         marginTop: theme.spacing(0.5),
         marginBottom: theme.spacing(-1),
     }

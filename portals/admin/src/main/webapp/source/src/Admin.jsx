@@ -17,6 +17,10 @@
  */
 
 import React, { Suspense, lazy } from 'react';
+import { CacheProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
+import { prefixer } from 'stylis';
+import rtlPlugin from 'stylis-plugin-rtl';
 import {
     BrowserRouter as Router, Redirect, Route, Switch,
 } from 'react-router-dom';
@@ -35,6 +39,9 @@ import UnexpectedError from 'AppComponents/Base/Errors/UnexpectedError';
 import LoginDenied from './app/LoginDenied';
 
 const ProtectedApp = lazy(() => import('./app/ProtectedApp' /* webpackChunkName: "ProtectedApps" */));
+
+const cacheRtl = createCache({ key: 'adminrtl', prepend: true, stylisPlugins: [prefixer, rtlPlugin] });
+const cacheLtr = createCache({ key: 'adminltr', prepend: true, stylisPlugins: [prefixer] });
 
 /**
  * Resolve the active language, preferring localStorage (set by the language switcher)
@@ -175,32 +182,34 @@ class Admin extends React.Component {
             return <Progress message='Resolving user ...' />;
         }
         return (
-            <IntlProvider locale={locale} messages={messages}>
-                <AdminRootErrorBoundary appName='Admin Application'>
-                    <Router basename={Configurations.app.context}>
-                        <Switch>
-                            <Redirect exact from='/login' to='/' />
-                            <Route path='/logout' component={Logout} />
-                            <Route
-                                render={() => {
-                                    if (notEnoughPermission) {
-                                        return <LoginDenied />;
-                                    } else if (unexpectedServerError) {
-                                        return <UnexpectedError />;
-                                    } else if (!user) {
-                                        return <RedirectToLogin />;
-                                    }
-                                    return (
-                                        <Suspense fallback={<Progress message='Loading app ...' />}>
-                                            <ProtectedApp user={user} />
-                                        </Suspense>
-                                    );
-                                }}
-                            />
-                        </Switch>
-                    </Router>
-                </AdminRootErrorBoundary>
-            </IntlProvider>
+            <CacheProvider value={languageDirection === 'rtl' ? cacheRtl : cacheLtr}>
+                <IntlProvider locale={locale} messages={messages}>
+                    <AdminRootErrorBoundary appName='Admin Application'>
+                        <Router basename={Configurations.app.context}>
+                            <Switch>
+                                <Redirect exact from='/login' to='/' />
+                                <Route path='/logout' component={Logout} />
+                                <Route
+                                    render={() => {
+                                        if (notEnoughPermission) {
+                                            return <LoginDenied />;
+                                        } else if (unexpectedServerError) {
+                                            return <UnexpectedError />;
+                                        } else if (!user) {
+                                            return <RedirectToLogin />;
+                                        }
+                                        return (
+                                            <Suspense fallback={<Progress message='Loading app ...' />}>
+                                                <ProtectedApp user={user} />
+                                            </Suspense>
+                                        );
+                                    }}
+                                />
+                            </Switch>
+                        </Router>
+                    </AdminRootErrorBoundary>
+                </IntlProvider>
+            </CacheProvider>
         );
     }
 }

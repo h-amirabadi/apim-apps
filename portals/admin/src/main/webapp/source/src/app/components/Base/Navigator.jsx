@@ -235,7 +235,7 @@ function Navigator(props) {
         logoHeight = theme.custom.logoHeight;
     }
 
-    const isRtl = document.body.getAttribute('dir') === 'rtl';
+    const isRtl = theme.direction === 'rtl';
     return (
         // eslint-disable-next-line react/jsx-props-no-spreading
         <StyledDrawer variant='permanent' anchor={isRtl ? 'right' : 'left'} {...other}>

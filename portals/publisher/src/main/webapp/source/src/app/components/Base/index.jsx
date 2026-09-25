@@ -44,6 +44,7 @@ const Root = styled('div')(({ theme }) => ({
 
     [`& .${classes.contentWrapper}`]: {
         flexGrow: 1,
+        minWidth: 0,
         transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
@@ -57,11 +58,12 @@ const Root = styled('div')(({ theme }) => ({
     [`& .${classes.drawerHeader}`]: {
         display: 'flex',
         alignItems: 'center',
-        padding: theme.spacing(0, 1),
+        paddingInline: theme.spacing(1),
         // necessary for content to be below app bar
         ...theme.mixins.toolbar,
         justifyContent: 'flex-end',
         minHeight: theme.spacing(8),
+        boxSizing: 'border-box',
     },
 
     [`.GlobalNavBar-drawer > .MuiDrawer-paper`]: {

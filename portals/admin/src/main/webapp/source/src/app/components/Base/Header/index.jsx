@@ -36,7 +36,14 @@ function Header(props) {
 
     return (
         <>
-            <Toolbar sx={{ boxShadow: '0 -1px 0 #dddddd inset', height: 50 }}>
+            <Toolbar
+                sx={{
+                    boxShadow: '0 -1px 0 #dddddd inset',
+                    minHeight: 50,
+                    height: 50,
+                    px: 2,
+                }}
+            >
                 <Grid container spacing={1} alignItems='center'>
                     <Hidden smUp>
                         <Grid item>
@@ -44,7 +51,7 @@ function Header(props) {
                                 color='inherit'
                                 aria-label='open drawer'
                                 onClick={() => handleDrawerToggle()}
-                                sx={{ ml: -1 }}
+                                sx={{ marginInlineStart: -1 }}
                                 size='large'
                             >
                                 <MenuIcon />

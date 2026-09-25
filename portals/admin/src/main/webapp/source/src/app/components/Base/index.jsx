@@ -60,6 +60,7 @@ function Base(props) {
         children, leftMenu, header,
     } = props;
     const theme = useTheme();
+    const isRtl = theme.direction === 'rtl';
     return (
         <>
             <Toaster
@@ -101,13 +102,14 @@ function Base(props) {
                     },
                 }}
             />
-            <StyledDiv sx={{ display: 'flex', minHeight: '100vh' }}>
+            <StyledDiv sx={{ display: 'flex', minHeight: '100vh', direction: 'inherit' }}>
                 <CssBaseline />
                 <StyledNav
                     sx={(thm) => ({
                         [thm.breakpoints.up('sm')]: {
                             width: 256,
                             flexShrink: 0,
+                            order: isRtl ? 2 : 0,
                         },
                     })}
                     aria-label='admin-portal-navbar'
@@ -119,6 +121,7 @@ function Base(props) {
                         flex: 1,
                         display: 'flex',
                         flexDirection: 'column',
+                        minWidth: 0,
                     }}
                 >
                     {header}
