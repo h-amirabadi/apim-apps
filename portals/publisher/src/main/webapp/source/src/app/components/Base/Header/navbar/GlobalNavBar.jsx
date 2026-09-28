@@ -94,7 +94,6 @@ const GlobalNavBar = (props) => {
     const { open, setOpen } = props;
 
     const theme = useTheme();
-    const isRtl = theme.direction === 'rtl';
     const drawerCommon = { class: classes.drawerCommon };
     const location = useLocation();
 
@@ -121,7 +120,6 @@ const GlobalNavBar = (props) => {
         <Root>
             <Drawer
                 variant={isRootPage ? 'permanent' : 'temporary'}
-                anchor={isRtl ? 'right' : 'left'}
                 className={clsx(classes.drawer, {
                     [classes.drawerOpen]: open,
                     [classes.drawerClose]: !open,

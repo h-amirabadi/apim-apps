@@ -1,6 +1,5 @@
 import React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
-import { useIntl } from 'react-intl';
 import AppBar from '@mui/material/AppBar';
 import { Toolbar } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
@@ -59,8 +58,6 @@ const Root = styled('div')(({ theme }) => ({
 export default function HeaderOriginal(props) {
     const { avatar, menuItems, user } = props;
     const theme = useTheme();
-    const { locale } = useIntl();
-    const isRtl = locale === 'fa';
     const [open, setOpen] = React.useState(false);
     const [openMiniSearch, setOpenMiniSearch] = React.useState(false);
     const toggleMiniSearch = () => { setOpenMiniSearch(!openMiniSearch); };
@@ -79,7 +76,7 @@ export default function HeaderOriginal(props) {
                         <IconButton
                             aria-label='Expand publisher landing page drawer'
                             onClick={handleDrawerToggle}
-                            edge={isRtl ? 'end' : 'start'}
+                            edge='start'
                             size='large'>
                             <Icon
                                 fontSize='large'

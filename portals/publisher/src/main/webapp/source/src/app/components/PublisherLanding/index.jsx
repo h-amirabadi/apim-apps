@@ -176,7 +176,9 @@ const PublisherLanding = () => {
                     <Typography className={classes.summaryTitle}>{title}</Typography>
                     <Link to={linkTo} style={{ textDecoration: 'none', alignSelf: 'end' }} tabIndex={-1}>
                         <IconButton className={classes.summaryArrow} size='small'>
-                            <ArrowForwardIosIcon />
+                            <ArrowForwardIosIcon
+                                sx={{ transform: theme.direction === 'rtl' ? 'scaleX(-1)' : 'none' }}
+                            />
                         </IconButton>
                     </Link>
                 </Box>
