@@ -60,7 +60,6 @@ function Base(props) {
         children, leftMenu, header,
     } = props;
     const theme = useTheme();
-    const isRtl = theme.direction === 'rtl';
     return (
         <>
             <Toaster
@@ -109,7 +108,7 @@ function Base(props) {
                         [thm.breakpoints.up('sm')]: {
                             width: 256,
                             flexShrink: 0,
-                            order: isRtl ? 2 : 0,
+                            order: 0,
                         },
                     })}
                     aria-label='admin-portal-navbar'
