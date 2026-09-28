@@ -45,3 +45,4 @@ license-wso2.txt
 
 # VS code configs
 .vscode
+/graphify-out/
