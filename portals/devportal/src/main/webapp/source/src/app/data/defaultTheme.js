@@ -358,27 +358,27 @@ const DefaultConfigurations = {
                     text: 'English',
                     direction: 'ltr',
                 },
-                {
-                    key: 'es',
-                    image: '/site/public/images/flags/sp.png',
-                    imageWidth: 24, // in pixles
-                    text: 'Spanish',
-                    direction: 'ltr',
-                },
-                {
-                    key: 'ar',
-                    image: '/site/public/images/flags/ar.png',
-                    imageWidth: 24, // in pixles
-                    text: 'Arabic',
-                    direction: 'rtl',
-                },
-                {
-                    key: 'si',
-                    image: '/site/public/images/flags/si.png',
-                    imageWidth: 24, // in pixles
-                    text: 'Sinhala',
-                    direction: 'ltr',
-                },
+                // {
+                //     key: 'es',
+                //     image: '/site/public/images/flags/sp.png',
+                //     imageWidth: 24, // in pixles
+                //     text: 'Spanish',
+                //     direction: 'ltr',
+                // },
+                // {
+                //     key: 'ar',
+                //     image: '/site/public/images/flags/ar.png',
+                //     imageWidth: 24, // in pixles
+                //     text: 'Arabic',
+                //     direction: 'rtl',
+                // },
+                // {
+                //     key: 'si',
+                //     image: '/site/public/images/flags/si.png',
+                //     imageWidth: 24, // in pixles
+                //     text: 'Sinhala',
+                //     direction: 'ltr',
+                // },
                 {
                     key: 'fa',
                     image: '/site/public/images/flags/ir.png',

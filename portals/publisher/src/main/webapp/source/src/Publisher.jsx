@@ -44,7 +44,7 @@ const ProtectedApp = lazy(() => import('./app/ProtectedApp' /* webpackChunkName:
 function resolveActiveLanguage() {
     const defaultLanguages = [
         { key: 'en', direction: 'ltr' },
-        { key: 'fr', direction: 'ltr' },
+        // { key: 'fr', direction: 'ltr' },
         { key: 'fa', direction: 'rtl' },
     ];
     const browserLanguage = (navigator.languages && navigator.languages[0])

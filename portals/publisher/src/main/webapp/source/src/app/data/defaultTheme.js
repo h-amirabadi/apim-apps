@@ -142,13 +142,13 @@ export default {
                     text: 'English',
                     direction: 'ltr',
                 },
-                {
-                    key: 'fr',
-                    image: '/site/public/images/flags/fr.png',
-                    imageWidth: 24,
-                    text: 'Français',
-                    direction: 'ltr',
-                },
+                // {
+                //     key: 'fr',
+                //     image: '/site/public/images/flags/fr.png',
+                //     imageWidth: 24,
+                //     text: 'Français',
+                //     direction: 'ltr',
+                // },
                 {
                     key: 'fa',
                     image: '/site/public/images/flags/ir.png',

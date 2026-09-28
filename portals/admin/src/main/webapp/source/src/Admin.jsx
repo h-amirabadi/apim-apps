@@ -51,8 +51,8 @@ const cacheLtr = createCache({ key: 'adminltr', prepend: true, stylisPlugins: [p
 function resolveActiveLanguage() {
     const defaultLanguages = [
         { key: 'en', direction: 'ltr' },
-        { key: 'si', direction: 'ltr' },
-        { key: 'fr', direction: 'ltr' },
+        // { key: 'si', direction: 'ltr' },
+        // { key: 'fr', direction: 'ltr' },
         { key: 'fa', direction: 'rtl' },
     ];
     const browserLanguage = (navigator.languages && navigator.languages[0])
