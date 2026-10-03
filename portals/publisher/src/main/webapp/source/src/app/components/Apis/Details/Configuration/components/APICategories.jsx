@@ -105,7 +105,7 @@ function APICategories(props) {
                                 key={category}
                                 icon={icon}
                                 checkedIcon={checkedIcon}
-                                style={{ marginRight: 8 }}
+                                style={{ marginInlineEnd: 8 }}
                                 checked={selected}
                             />
                             {category}

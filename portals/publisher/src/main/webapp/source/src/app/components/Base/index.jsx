@@ -103,7 +103,7 @@ const Base = ({ children, user }) => {
                 <title>{getTitle()}</title>
             </Helmet>
             <Toaster
-                position='bottom-right'
+                position={theme.direction === 'rtl' ? 'bottom-left' : 'bottom-right'}
                 gutter={8}
                 toastOptions={{
                     style: {

@@ -80,7 +80,7 @@ const PolicyList: FC<PolicyListPorps> = ({policyList, fetchPolicies}) => {
     const gatewayType = CONSTS.GATEWAY_TYPE.synapse;
 
     return (
-        <StyledPaper className={classes.paper} style={{ flex: '0 0 auto', marginLeft: '20px' }}>
+        <StyledPaper className={classes.paper} style={{ flex: '0 0 auto', marginInlineStart: '20px' }}>
             <Card variant='outlined'>
                 <CardContent>
                     <Box height='100vh'>

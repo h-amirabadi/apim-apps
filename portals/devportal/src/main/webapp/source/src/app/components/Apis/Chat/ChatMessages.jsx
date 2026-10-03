@@ -79,7 +79,7 @@ function ChatMessages(props) {
                     >
                         Search APIs with Marketplace Assistant
                         <LaunchIcon
-                            style={{ marginLeft: '2px' }}
+                            style={{ marginInlineStart: '2px' }}
                             fontSize='small'
                         />
                     </a>

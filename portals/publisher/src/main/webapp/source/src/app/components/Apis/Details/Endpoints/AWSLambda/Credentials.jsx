@@ -377,13 +377,18 @@ export default function Credentials(props) {
             <br/>
             <Grid item>
                 <Link to={`/apis/${apiId}/resources`}>
-                    <Typography style={{ marginLeft: '10px' }} color='primary' display='inline' variant='caption'>
+                    <Typography
+                        style={{ marginInlineStart: '10px' }}
+                        color='primary'
+                        display='inline'
+                        variant='caption'
+                    >
                         <FormattedMessage
                             id={'Apis.Details.Endpoints.EndpointOverview.awslambda'
                             + '.endpoint.linkToResources'}
                             defaultMessage='Go to Resources to map ARNs'
                         />
-                        <LaunchIcon style={{ marginLeft: '2px' }} fontSize='small' />
+                        <LaunchIcon style={{ marginInlineStart: '2px' }} fontSize='small' />
                     </Typography>
                 </Link>
             </Grid>

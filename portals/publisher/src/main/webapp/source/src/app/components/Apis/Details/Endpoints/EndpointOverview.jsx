@@ -1020,7 +1020,7 @@ function EndpointOverview(props) {
                                                                                         size='large'
                                                                                     >
                                                                                         <LaunchIcon
-                                                                                            style={{ marginLeft: '2px' }}
+                                                                                            style={{ marginInlineStart: '2px' }}
                                                                                             fontSize='small'
                                                                                             color='primary'
                                                                                         />

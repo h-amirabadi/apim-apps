@@ -92,7 +92,7 @@ function Usages(props) {
             usageDisplayText = (
                 <Button
                     className={classes.apiUsageStyle}
-                    style={{ backgroundColor: 'transparent', marginLeft: -3 }}
+                    style={{ backgroundColor: 'transparent', marginInlineStart: -3 }}
                     disableRipple
                     color='primary'
                     onClick={toggleOpen}

@@ -43,7 +43,18 @@
         <link rel="icon" type="image/png" href="<%= context%>/site/public/images/_favicon.png">
         <link href="<%= context%>/site/public/css/main.css" type="text/css" rel="stylesheet" />
     </head>
-    <body dir="ltr">
+    <body>
+        <script>
+            /* Apply the saved language direction before first paint to avoid an LTR flash in RTL locales */
+            (function () {
+                var lang = null;
+                try { lang = localStorage.getItem('language'); } catch (e) { /* ignore */ }
+                if (lang === 'fa') {
+                    document.documentElement.setAttribute('dir', 'rtl');
+                    document.documentElement.setAttribute('lang', 'fa');
+                }
+            })();
+        </script>
         <div id="react-root">
             <div class="apim-dual-ring"></div>
         </div>

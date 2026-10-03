@@ -401,7 +401,7 @@ class APIThumb extends Component {
                                 <div style={{ position: 'absolute', bottom: 0 }}>
                                     <MonetizationOnIcon
                                         fontSize='medium'
-                                        style={{ color: '#FFD700', paddingLeft: '2px' }}
+                                        style={{ color: '#FFD700', paddingInlineStart: '2px' }}
                                     />
                                 </div>
                             )}
@@ -549,7 +549,10 @@ class APIThumb extends Component {
                                                     >
                                                         <div style={{ display: 'flex', padding: '4px' }}>
                                                             <EmailIcon fontSize='small' />
-                                                            <Typography variant='body2' style={{ marginLeft: '8px' }}>
+                                                            <Typography
+                                                                variant='body2'
+                                                                style={{ marginInlineStart: '8px' }}
+                                                            >
                                                                 {api.businessOwnerEmail}
                                                             </Typography>
                                                         </div>
@@ -606,7 +609,10 @@ class APIThumb extends Component {
                                                     >
                                                         <div style={{ display: 'flex', padding: '4px' }}>
                                                             <EmailIcon fontSize='small' />
-                                                            <Typography variant='body2' style={{ marginLeft: '8px' }}>
+                                                            <Typography
+                                                                variant='body2'
+                                                                style={{ marginInlineStart: '8px' }}
+                                                            >
                                                                 {api.technicalOwnerEmail}
                                                             </Typography>
                                                         </div>
@@ -635,7 +641,7 @@ class APIThumb extends Component {
                         </Typography>
                     </Box>
                     {!this.isAccessRestricted() && (
-                        <div style={{ marginLeft: 'auto' }}>
+                        <div style={{ marginInlineStart: 'auto' }}>
                             <DeleteButton
                                 setLoading={this.setLoading}
                                 api={api}

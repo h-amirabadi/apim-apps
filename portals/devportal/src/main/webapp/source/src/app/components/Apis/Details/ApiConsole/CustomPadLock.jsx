@@ -144,7 +144,7 @@ function CustomPadLock(props) {
                                                     defaultMessage='Scopes'
                                                 />
                                             </StyledTableCell>
-                                            <StyledTableCell style={{ maxWidth: 250, paddingRight: 0 }}>
+                                            <StyledTableCell style={{ maxWidth: 250, paddingInlineEnd: 0 }}>
                                                 {scopes.length > 0 && (
                                                     <ScrollContainer
                                                         style={scopes.length <= 5 ? { overflowY: 'visible', maxHeight: 'none' } : {}}

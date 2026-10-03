@@ -338,7 +338,7 @@ class HeaderSearch extends React.Component {
                                     id='Base.Header.headersearch.HeaderSearch.tooltip.title'
                                     defaultMessage='Search Options for APIs, MCP Servers and APIProducts'
                                 />
-                                <ol style={{ marginLeft: '-20px', marginTop: '8px' }}>
+                                <ol style={{ marginInlineStart: '-20px', marginTop: '8px' }}>
                                     <li style={{ marginTop: '5px' }}>
                                         <FormattedMessage
                                             id='Base.Header.headersearch.HeaderSearch.tooltip.option0'

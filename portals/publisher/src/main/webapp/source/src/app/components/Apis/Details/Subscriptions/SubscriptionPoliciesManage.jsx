@@ -351,7 +351,11 @@ export class SubscriptionPoliciesManage extends Component {
                                                 <Tooltip title={getPolicyDetails(policy)}>
                                                     <InfoIcon
                                                         color='action'
-                                                        style={{ marginLeft: 5, fontSize: 20, cursor: 'default' }}
+                                                        style={{
+                                                            marginInlineStart: 5,
+                                                            fontSize: 20,
+                                                            cursor: 'default',
+                                                        }}
                                                     />
                                                 </Tooltip>
                                             </div>

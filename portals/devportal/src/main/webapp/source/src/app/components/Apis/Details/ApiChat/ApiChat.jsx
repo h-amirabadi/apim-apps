@@ -368,7 +368,7 @@ const ApiChat = () => {
                     >
                         Test APIs with API Chat
                         <LaunchIcon
-                            style={{ marginLeft: '2px' }}
+                            style={{ marginInlineStart: '2px' }}
                             fontSize='small'
                         />
                     </a>
@@ -390,7 +390,7 @@ const ApiChat = () => {
                     >
                         Configure Key
                         <LaunchIcon
-                            style={{ marginLeft: '2px' }}
+                            style={{ marginInlineStart: '2px' }}
                             fontSize='small'
                         />
                     </Link>

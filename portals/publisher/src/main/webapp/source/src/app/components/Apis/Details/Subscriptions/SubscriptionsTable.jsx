@@ -17,7 +17,7 @@
  */
 
 import React, { Component } from 'react';
-import { styled } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import { FormattedMessage, injectIntl, defineMessages } from 'react-intl';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
@@ -201,6 +201,8 @@ const subscriptionStatus = {
  * @returns {*}
  */
 function SubscriptionTablePagination(props) {
+    const theme = useTheme();
+    const isRtl = theme.direction === 'rtl';
     const {
         count, page, rowsPerPage, onChangePage,
     } = props;
@@ -246,22 +248,22 @@ function SubscriptionTablePagination(props) {
             style={{ display: 'flex' }}
         >
             <IconButton onClick={handleFirstPageButtonClick} disabled={page === 0} size='large'>
-                <FirstPageIcon />
+                {isRtl ? <LastPageIcon /> : <FirstPageIcon />}
             </IconButton>
             <IconButton onClick={handleBackButtonClick} disabled={page === 0} size='large'>
-                <KeyboardArrowLeft />
+                {isRtl ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
             </IconButton>
             <IconButton
                 onClick={handleNextButtonClick}
                 disabled={page >= Math.ceil(count / rowsPerPage) - 1}
                 size='large'>
-                <KeyboardArrowRight />
+                {isRtl ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
             </IconButton>
             <IconButton
                 onClick={handleLastPageButtonClick}
                 disabled={page >= Math.ceil(count / rowsPerPage) - 1}
                 size='large'>
-                <LastPageIcon />
+                {isRtl ? <FirstPageIcon /> : <LastPageIcon />}
             </IconButton>
         </div>
     );
@@ -1218,7 +1220,7 @@ class SubscriptionsTable extends Component {
                             >
                                 {loadingContactInfo ? (
                                     <>
-                                        <CircularProgress size={16} style={{ marginRight: 8 }} />
+                                        <CircularProgress size={16} style={{ marginInlineEnd: 8 }} />
                                         <FormattedMessage
                                             id='Apis.Details.Subscriptions.SubscriptionsTable.loading.contact.info'
                                             defaultMessage='Loading...'

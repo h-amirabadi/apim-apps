@@ -81,7 +81,7 @@ class ImageGenerator extends PureComponent {
         }
         return (
             <Root className={classes.iconWrapper} style={{ width }}>
-                <Icon className={classes.icon} style={{ fontSize: height, marginLeft: -height / 2, color }}>
+                <Icon className={classes.icon} style={{ fontSize: height, marginInlineStart: -height / 2, color }}>
                     {iconElement}
                 </Icon>
                 {(!theme.custom.thumbnailTemplates || !theme.custom.thumbnailTemplates.active) && (

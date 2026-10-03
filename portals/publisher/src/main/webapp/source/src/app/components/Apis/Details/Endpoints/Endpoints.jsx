@@ -800,7 +800,7 @@ function Endpoints(props) {
                                     onClick={() => {
                                         history.push(`${getBasePath(api.apiType)}${api.id}/endpoints/create`);
                                     }}
-                                    style={{ marginLeft: '1em' }}
+                                    style={{ marginInlineStart: '1em' }}
                                 >
                                     <AddCircle className={classes.buttonIcon} />
                                     <FormattedMessage

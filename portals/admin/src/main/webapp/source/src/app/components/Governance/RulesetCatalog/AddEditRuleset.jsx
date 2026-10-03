@@ -444,7 +444,7 @@ function AddEditRuleset(props) {
             <Box component='div' m={2} sx={{ mb: 15 }}>
                 <Grid container spacing={2}>
                     {/* General Details Section */}
-                    <Grid item xs={12} md={12} lg={3} style={{ paddingLeft: '24px', paddingTop: '24px' }}>
+                    <Grid item xs={12} md={12} lg={3} style={{ paddingInlineStart: '24px', paddingTop: '24px' }}>
                         <Typography color='inherit' variant='subtitle2' component='div'>
                             <FormattedMessage
                                 id='Governance.Rulesets.AddEdit.general.details'
@@ -582,7 +582,7 @@ function AddEditRuleset(props) {
                     </Grid>
 
                     {/* Ruleset Content Section */}
-                    <Grid item xs={12} md={12} lg={5} style={{ paddingLeft: '24px' }}>
+                    <Grid item xs={12} md={12} lg={5} style={{ paddingInlineStart: '24px' }}>
                         <Typography color='inherit' variant='subtitle2' component='div'>
                             <FormattedMessage
                                 id='Governance.Rulesets.AddEdit.content.title'

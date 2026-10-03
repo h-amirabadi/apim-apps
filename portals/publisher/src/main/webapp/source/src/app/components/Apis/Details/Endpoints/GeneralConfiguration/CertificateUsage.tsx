@@ -172,7 +172,7 @@ export const CertificateUsage = (props: CertificateUsageProps) => {
                 {isLoading && (
                     <CircularProgress
                         size={24}
-                        style={{ marginLeft: 15, position: "relative", top: 4 }}
+                        style={{ marginInlineStart: 15, position: "relative", top: 4 }}
                     />
                 )}
             </Typography>

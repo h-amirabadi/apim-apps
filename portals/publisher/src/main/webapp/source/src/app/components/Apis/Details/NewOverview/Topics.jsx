@@ -180,7 +180,7 @@ class Topics extends React.Component {
                                 id='Apis.Details.NewOverview.Operations.ShowMore'
                                 defaultMessage='Show More'
                             />
-                            <LaunchIcon style={{ marginLeft: '2px' }} fontSize='small' />
+                            <LaunchIcon style={{ marginInlineStart: '2px' }} fontSize='small' />
                         </Typography>
                     </Link>
                 </Box>

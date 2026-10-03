@@ -326,11 +326,11 @@ const APIDetailsTopMenu = (props) => {
                     })()}
                     className={classes.backLink}
                 >
-                    <Box width={70} height={50} marginLeft={1}>
+                    <Box width={70} height={50} style={{ marginInlineStart: theme.spacing(1) }}>
                         <ThumbnailView api={api} width={70} height={50} imageUpdate={imageUpdate}
                             updateAPI={updateAPI} />
                     </Box>
-                    <div style={{ marginLeft: theme.spacing(1), maxWidth: 500 }}>
+                    <div style={{ marginInlineStart: theme.spacing(1), maxWidth: 500 }}>
                         <Link
                             to={(() => {
                                 if (api.isMCPServer()) {
@@ -349,7 +349,7 @@ const APIDetailsTopMenu = (props) => {
                                 {' :'}
                                 {api.version}
                             </Typography>
-                            <Typography variant='caption' gutterBottom align='left'>
+                            <Typography variant='caption' gutterBottom>
                                 <FormattedMessage
                                     id='Apis.Details.components.APIDetailsTopMenu.created.by'
                                     defaultMessage='Created by '
@@ -378,7 +378,7 @@ const APIDetailsTopMenu = (props) => {
                         {lifecycleState in ApiLifeCycleStates
                             ? ApiLifeCycleStates[lifecycleState] : lifecycleState}
                     </Typography>
-                    <Typography variant='caption' align='left'>
+                    <Typography variant='caption'>
                         <FormattedMessage
                             id='Apis.Details.components.APIDetailsTopMenu.state'
                             defaultMessage='State'
@@ -656,7 +656,7 @@ const APIDetailsTopMenu = (props) => {
                             <div>
                                 <CloudDownloadRounded />
                             </div>
-                            <Typography variant='caption' align='left'>
+                            <Typography variant='caption'>
                                 {api.isMCPServer() ? (
                                     <FormattedMessage
                                         id='Apis.Details.APIDetailsTopMenu.download.mcp.server'

@@ -72,7 +72,7 @@ const DesignAssistantMenu = () => {
                         <img 
                             alt='API Design Assistant'
                             src={`${app.context}/site/public/images/ai/DesignAssistant.svg`}
-                            style={{ marginLeft: 8, width: 15, height: 15 }}
+                            style={{ marginInlineStart: 8, width: 15, height: 15 }}
                         />
                     </Button>
                 </Box>

@@ -264,7 +264,7 @@ function LoadBalanceConfig(props) {
                     autoFocus
                     onClick={submitConfiguration}
                     disabled={lbConfig.algoClassName === '' || isRestricted(['apim:api_create'], api)}
-                    style={{ marginRight: '10px' }}
+                    style={{ marginInlineEnd: '10px' }}
                 >
                     <FormattedMessage
                         id='Apis.Details.Endpoints.EndpointOverview.loadbalance.config.save.button'

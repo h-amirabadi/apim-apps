@@ -62,7 +62,15 @@ const LoadingDots: React.FC = () => {
       <style>
         {keyframesStyle}
       </style>
-      <div style={{ ...containerStyle, display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginLeft: '16px' }}>
+      <div
+        style={{
+          ...containerStyle,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+          marginInlineStart: '16px',
+        }}
+      >
         <span style={textStyle}>Generating a response</span>
         <div style={dotsStyle}>
           <span style={{ ...dotStyle, animationDelay: '-0.32s' }}></span>

@@ -26,7 +26,15 @@ const Progress = (props) => {
     if (per === -1) { // Means default value means no progress percentage
         return (
             <div className='apim-dual-ring'>
-                <span style={{ width: '200px', display: 'block', marginLeft: '-33px' }}>{message}</span>
+                <span style={{
+                    width: '200px',
+                    display: 'block',
+                    position: 'relative',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    textAlign: 'center',
+                }}
+                >{message}</span>
             </div>
         );
     } else {

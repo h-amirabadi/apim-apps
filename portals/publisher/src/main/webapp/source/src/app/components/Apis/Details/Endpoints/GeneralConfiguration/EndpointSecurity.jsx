@@ -1435,7 +1435,7 @@ function EndpointSecurity(props) {
                     color='primary'
                     autoFocus
                     variant='contained'
-                    style={{ marginTop: '10px', marginRight: '10px', marginBottom: '10px' }}
+                    style={{ marginTop: '10px', marginInlineEnd: '10px', marginBottom: '10px' }}
                     id='endpoint-security-submit-btn'
                 >
                     <FormattedMessage

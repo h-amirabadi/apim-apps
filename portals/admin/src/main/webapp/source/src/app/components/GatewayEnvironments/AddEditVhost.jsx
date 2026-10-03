@@ -344,7 +344,7 @@ function AddEditVhost(props) {
                                     <Grid item xs={12}>
                                         <Typography
                                             variant='body1'
-                                            style={{ marginLeft: '8px' }}
+                                            style={{ marginInlineStart: '8px' }}
                                         >
                                             <FormattedMessage
                                                 id='GatewayEnvironments.AddEditVhost.host.gateway.access.url'
@@ -356,7 +356,7 @@ function AddEditVhost(props) {
                                         <Typography
                                             color='textSecondary'
                                             variant='body2'
-                                            style={{ marginLeft: '16px' }}
+                                            style={{ marginInlineStart: '16px' }}
                                         >
                                             {
                                                 `http://${vhost.host

@@ -173,7 +173,7 @@ function OperationSelector({
                                             method={value.verb.toUpperCase()}
                                             className={classes.methodView}
                                         />
-                                        <span style={{ marginLeft: '4px' }}>
+                                        <span style={{ marginInlineStart: '4px' }}>
                                             {value.target}
                                         </span>
                                     </Box>

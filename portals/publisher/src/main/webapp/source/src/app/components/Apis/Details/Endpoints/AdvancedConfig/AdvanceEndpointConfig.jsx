@@ -575,7 +575,7 @@ function AdvanceEndpointConfig(props) {
                         autoFocus
                         disabled={isCreateRestricted()}
                         variant='contained'
-                        style={{ marginRight: '10px' }}
+                        style={{ marginInlineEnd: '10px' }}
                         id='endpoint-configuration-submit-btn'
                     >
                         <FormattedMessage

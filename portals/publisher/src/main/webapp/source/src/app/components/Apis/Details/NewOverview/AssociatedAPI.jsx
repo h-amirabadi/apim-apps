@@ -106,7 +106,7 @@ function AssociatedAPI({ api, parentClasses }) {
                                                 }}
                                             >
                                                 {apiInfo.apiName}
-                                                <LaunchIcon style={{ marginLeft: '4px' }} fontSize='small' />
+                                                <LaunchIcon style={{ marginInlineStart: '4px' }} fontSize='small' />
                                             </Link>
                                         ) : (
                                             apiInfo.apiName

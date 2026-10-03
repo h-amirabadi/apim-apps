@@ -713,7 +713,7 @@ export default function CustomizedStepper() {
                                                     container
                                                     direction='row'
                                                     justifyContent='center'
-                                                    style={{ marginLeft: '2px' }}
+                                                    style={{ marginInlineStart: '2px' }}
                                                 >
                                                     <Grid item>
                                                         {endpointStatus.isEndpointReady
@@ -857,7 +857,7 @@ export default function CustomizedStepper() {
                                                     direction='row'
                                                     justifyContent='center'
                                                     alignItems='center'
-                                                    style={{ marginLeft: '2px' }}
+                                                    style={{ marginInlineStart: '2px' }}
                                                 >
                                                     <Grid item>
                                                         {isTierAvailable ? (

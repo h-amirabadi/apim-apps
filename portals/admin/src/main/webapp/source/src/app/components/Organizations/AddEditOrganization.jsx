@@ -249,7 +249,7 @@ function AddEditOrganization(props) {
             formSaveCallback={formSaveCallback}
             dialogOpenCallback={dialogOpenCallback}
         >
-            <Box style={{ paddingRight: '20px' }}>
+            <Box style={{ paddingInlineEnd: '20px' }}>
                 <TextField
                     autoFocus
                     margin='dense'

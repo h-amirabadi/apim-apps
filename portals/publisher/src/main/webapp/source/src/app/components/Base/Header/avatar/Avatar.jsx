@@ -143,7 +143,7 @@ class Avatar extends Component {
                     <AccountCircle className={classes.accountIcon} />
                     {' '}
                     {username.replace('@carbon.super', '')}
-                    <Icon style={{ fontSize: '22px', marginLeft: '1px' }}>
+                    <Icon style={{ fontSize: '22px', marginInlineStart: '1px' }}>
                         keyboard_arrow_down
                     </Icon>
                     {readOnlyUser && (

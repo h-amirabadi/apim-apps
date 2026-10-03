@@ -282,7 +282,7 @@ function OrganizationSubscriptionPoliciesManage(props) {
                                                             <Checkbox
                                                                 icon={icon}
                                                                 checkedIcon={checkedIcon}
-                                                                style={{ marginRight: 8 }}
+                                                                style={{ marginInlineEnd: 8 }}
                                                                 checked={selected}
                                                             />
                                                             {option.displayName} - {option.description} 

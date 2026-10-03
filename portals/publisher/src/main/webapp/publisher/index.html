@@ -13,6 +13,17 @@
 </head>
 
 <body>
+    <script>
+        /* Apply the saved language direction before first paint to avoid an LTR flash in RTL locales */
+        (function () {
+            var lang = null;
+            try { lang = localStorage.getItem('language'); } catch (e) { /* ignore */ }
+            if (lang === 'fa') {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'fa');
+            }
+        })();
+    </script>
     <div id="react-root">
         <div class="apim-dual-ring"></div>
     </div>

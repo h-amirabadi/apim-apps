@@ -157,6 +157,8 @@ function ScopeTablePagination(props) {
     const {
         count, page, rowsPerPage, onChangePage,
     } = props;
+    const theme = useTheme();
+    const isRtl = theme.direction === 'rtl';
 
     /**
      * handleFirstPageButtonClick loads data of the first page
@@ -197,22 +199,22 @@ function ScopeTablePagination(props) {
     return (
         <div style={{ display: 'flex' }}>
             <IconButton onClick={handleFirstPageButtonClick} disabled={page === 0} size='large'>
-                <FirstPageIcon />
+                {isRtl ? <LastPageIcon /> : <FirstPageIcon />}
             </IconButton>
             <IconButton onClick={handleBackButtonClick} disabled={page === 0} size='large'>
-                <KeyboardArrowLeft />
+                {isRtl ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
             </IconButton>
             <IconButton
                 onClick={handleNextButtonClick}
                 disabled={page >= Math.ceil(count / rowsPerPage) - 1}
                 size='large'>
-                <KeyboardArrowRight />
+                {isRtl ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
             </IconButton>
             <IconButton
                 onClick={handleLastPageButtonClick}
                 disabled={page >= Math.ceil(count / rowsPerPage) - 1}
                 size='large'>
-                <LastPageIcon />
+                {isRtl ? <FirstPageIcon /> : <LastPageIcon />}
             </IconButton>
         </div>
     );

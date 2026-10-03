@@ -378,7 +378,7 @@ function APIThumbPlain(props) {
                                                         <EmailIcon fontSize='small' />
                                                         <Typography
                                                             variant='body2'
-                                                            style={{ marginLeft: '8px' }}
+                                                            style={{ marginInlineStart: '8px' }}
                                                         >
                                                             {api.businessInformation.businessOwnerEmail}
                                                         </Typography>
@@ -450,7 +450,7 @@ function APIThumbPlain(props) {
                                                         <EmailIcon fontSize='small' />
                                                         <Typography
                                                             variant='body2'
-                                                            style={{ marginLeft: '8px' }}
+                                                            style={{ marginInlineStart: '8px' }}
                                                         >
                                                             {api.businessInformation.technicalOwnerEmail}
                                                         </Typography>

@@ -118,7 +118,7 @@ const Tools = (props) => {
                                         id='MCPServers.Overview.Tools.showMore'
                                         defaultMessage='Show More'
                                     />
-                                    <LaunchIcon style={{ marginLeft: '2px' }} fontSize='small' />
+                                    <LaunchIcon style={{ marginInlineStart: '2px' }} fontSize='small' />
                                 </Typography>
                             </Link>
                         </Box>

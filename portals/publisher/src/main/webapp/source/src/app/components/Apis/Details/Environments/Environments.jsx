@@ -1877,7 +1877,7 @@ export default function Environments() {
                                     </>
                                 )}
                             </Grid>
-                            <Grid style={{ display: 'flex', flexDirection: 'row', marginLeft: '76px' }}>
+                            <Grid style={{ display: 'flex', flexDirection: 'row', marginInlineStart: '76px' }}>
                                 <Button
                                     className={classes.textShape3}
                                     onClick={() => toggleOpenConfirmRestore(

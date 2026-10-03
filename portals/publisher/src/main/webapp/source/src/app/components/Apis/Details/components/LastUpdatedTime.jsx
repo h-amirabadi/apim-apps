@@ -17,7 +17,7 @@
  */
 import React from 'react';
 import moment from 'moment';
-import { Typography, Tooltip } from '@mui/material';
+import { Typography, Tooltip, useTheme } from '@mui/material';
 import { FormattedMessage } from 'react-intl';
 
 /**
@@ -27,8 +27,9 @@ import { FormattedMessage } from 'react-intl';
  */
 function LastUpdatedTime(props) {
     const { lastUpdatedTime } = props;
+    const theme = useTheme();
     return (
-        <div style={{ float: 'right' }}>
+        <div style={{ float: theme.direction === 'rtl' ? 'left' : 'right' }}>
             <Tooltip
                 title={moment(parseInt(lastUpdatedTime, 10)).calendar()}
                 interactive

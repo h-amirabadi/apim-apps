@@ -78,7 +78,7 @@ const AdvertiseDetailsPanel = (props) => {
                 </Typography>
             </Grid>
             <Grid container spacing={2} x={8} md={6} direction='row' className={classes.tokenType}>
-                <Grid xs={6} md={4} style={{ paddingLeft: 0 }} item>
+                <Grid xs={6} md={4} style={{ paddingInlineStart: 0 }} item>
                     <TextField
                         margin='normal'
                         variant='outlined'
@@ -95,7 +95,7 @@ const AdvertiseDetailsPanel = (props) => {
                         fullWidth
                     />
                 </Grid>
-                <Grid xs={6} md={8} style={{ paddingRight: 0 }} item>
+                <Grid xs={6} md={8} style={{ paddingInlineEnd: 0 }} item>
                     <TextField
                         margin='normal'
                         variant='outlined'

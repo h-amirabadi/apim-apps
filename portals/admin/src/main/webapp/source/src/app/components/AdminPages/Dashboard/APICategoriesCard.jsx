@@ -120,7 +120,7 @@ export default function APICategoriesCard() {
 
     const apiCategoriesListingCard = () => {
         return (
-            <Card sx={{ minWidth: 275, minHeight: 270, textAlign: 'center' }} style={{ textAlign: 'left' }}>
+            <Card sx={{ minWidth: 275, minHeight: 270, textAlign: 'center' }} style={{ textAlign: 'start' }}>
                 <CardContent>
                     <Box display='flex'>
                         <Box flexGrow={1}>

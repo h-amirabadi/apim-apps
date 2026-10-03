@@ -136,7 +136,7 @@ export default function GenericSubscriptionUI(props) {
                     />
                 </Grid>
             </AccordionDetails>
-            <AccordionActions style={{ paddingRight: '18px' }}>
+            <AccordionActions style={{ paddingInlineEnd: '18px' }}>
                 <Button size='small' onClick={handleClick}>
                     <FormattedMessage id='Apis.Details.AsyncApiConsole.Curl' defaultMessage='Generate Curl' />
                 </Button>

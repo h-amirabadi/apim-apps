@@ -91,7 +91,7 @@ class Avatar extends Component {
                     <AccountCircle sx={{ mr: 1 }} />
                     {' '}
                     {username}
-                    <Icon style={{ fontSize: '22px', marginLeft: '1px' }}>
+                    <Icon style={{ fontSize: '22px', marginInlineStart: '1px' }}>
                         keyboard_arrow_down
                     </Icon>
                 </IconButton>

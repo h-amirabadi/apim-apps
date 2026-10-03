@@ -63,7 +63,7 @@ const ResourceNotFound = (props) => {
                                             />
                                         </Typography>
                                     </Box>
-                                    <Link to='/apis/' style={{ marginRight: 8 }}>
+                                    <Link to='/apis/' style={{ marginInlineEnd: 8 }}>
                                         <Button variant='contained' color='primary'>
                                             <FormattedMessage
                                                 id='Base.Errors.ResourceNotFound.api.list'
@@ -72,7 +72,7 @@ const ResourceNotFound = (props) => {
                                         </Button>
                                     </Link>
                                     {isMCPSupportEnabled && (
-                                        <Link to='/mcp-servers/' style={{ marginRight: 8 }}>
+                                        <Link to='/mcp-servers/' style={{ marginInlineEnd: 8 }}>
                                             <Button variant='contained' color='primary'>
                                                 <FormattedMessage
                                                     id='Base.Errors.ResourceNotFound.mcp.server.list'

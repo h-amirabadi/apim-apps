@@ -76,10 +76,8 @@ const apisTableHead = (props) => {
                     return (
                         <TableCell
                             key={column.id}
-                            align='left'
                             sortDirection={orderBy === column.id ? order : false}
                             width={column.width}
-                            style={{ marginLeft: 50 }}
                         >
                             {column.sorting ? (
                                 <TableSortLabel

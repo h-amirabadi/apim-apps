@@ -2152,7 +2152,7 @@ function AddEditKeyManager(props) {
                                                                 key={organization.organizationId}
                                                                 icon={icon}
                                                                 checkedIcon={checkedIcon}
-                                                                style={{ marginRight: 8 }}
+                                                                style={{ marginInlineEnd: 8 }}
                                                                 checked={selected}
                                                             />
                                                             {organization.displayName}
@@ -2329,7 +2329,7 @@ function AddEditKeyManager(props) {
                                             name='enableSelfValidationJWT'
                                             value={enableSelfValidationJWT ? 'selfValidate' : 'useIntrospect'}
                                             onChange={onChange}
-                                            style={{ flexDirection: 'row', paddingLeft: 16 }}
+                                            style={{ flexDirection: 'row', paddingInlineStart: 16 }}
                                         >
                                             <FormControlLabel
                                                 value='selfValidate'
@@ -2471,7 +2471,7 @@ function AddEditKeyManager(props) {
                                                     color='inherit'
                                                     variant='caption'
                                                     component='div'
-                                                    style={{ paddingLeft: 16 }}
+                                                    style={{ paddingInlineStart: 16 }}
                                                     id='KeyManagers.AddEditKeyManager.constraints.hidden.help.body'
                                                 >
                                                     <FormattedMessage
@@ -2528,7 +2528,7 @@ function AddEditKeyManager(props) {
                                                 color='inherit'
                                                 variant='caption'
                                                 component='div'
-                                                style={{ paddingLeft: 16 }}
+                                                style={{ paddingInlineStart: 16 }}
                                                 id='KeyManagers.AddEditKeyManager.claim.mappings.help.description'
                                             >
                                                 <FormattedMessage

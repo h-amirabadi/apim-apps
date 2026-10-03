@@ -185,7 +185,7 @@ const CreatePolicy: React.FC<CreatePolicyProps> = ({
                                 defaultMessage='Want to create a common policy that will be visible to all APIs instead?'
                             />
                             <LaunchIcon
-                                style={{ marginLeft: '2px' }}
+                                style={{ marginInlineStart: '2px' }}
                                 fontSize='small'
                             />
                         </Typography>

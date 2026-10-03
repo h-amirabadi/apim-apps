@@ -226,7 +226,7 @@ const ApiCreateWithAI = () => {
                     >
                         Create APIs with AI
                         <LaunchIcon
-                            style={{ marginLeft: '2px' }}
+                            style={{ marginInlineStart: '2px' }}
                             fontSize='small'
                         />
                     </a>

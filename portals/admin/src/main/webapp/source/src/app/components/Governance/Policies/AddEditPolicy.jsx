@@ -622,7 +622,7 @@ function AddEditPolicy(props) {
         >
             <Box component='div' m={2} sx={{ mb: 15 }}>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} md={12} lg={3} style={{ paddingLeft: '24px', paddingTop: '24px' }}>
+                    <Grid item xs={12} md={12} lg={3} style={{ paddingInlineStart: '24px', paddingTop: '24px' }}>
                         <Typography color='inherit' variant='subtitle2' component='div'>
                             <FormattedMessage
                                 id='Governance.Policies.AddEdit.general.details'
@@ -692,7 +692,7 @@ function AddEditPolicy(props) {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12} md={12} lg={3} style={{ paddingLeft: '24px' }}>
+                    <Grid item xs={12} md={12} lg={3} style={{ paddingInlineStart: '24px' }}>
                         <Typography color='inherit' variant='subtitle2' component='div'>
                             <FormattedMessage
                                 id='Governance.Policies.AddEdit.labels.title'
@@ -802,7 +802,7 @@ function AddEditPolicy(props) {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12} md={12} lg={3} style={{ paddingLeft: '24px' }}>
+                    <Grid item xs={12} md={12} lg={3} style={{ paddingInlineStart: '24px' }}>
                         <Typography color='inherit' variant='subtitle2' component='div'>
                             <FormattedMessage
                                 id='Governance.Policies.AddEdit.enforcement.title'
@@ -990,7 +990,7 @@ function AddEditPolicy(props) {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12} md={12} lg={12} style={{ paddingLeft: '24px' }}>
+                    <Grid item xs={12} md={12} lg={12} style={{ paddingInlineStart: '24px' }}>
                         <Typography color='inherit' variant='subtitle2' component='div'>
                             <FormattedMessage
                                 id='Governance.Policies.AddEdit.rulesets.title'

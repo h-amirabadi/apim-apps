@@ -21,6 +21,7 @@ import {
     Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField,
 } from '@mui/material';
 import Slide from '@mui/material/Slide';
+import { useTheme } from '@mui/material/styles';
 import { FormattedMessage, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import Tooltip from '@mui/material/Tooltip';
@@ -33,6 +34,7 @@ const ResetThrottlePolicyDialog = (props) => {
     const [step, setStep] = useState(1);
     const [isUserValid, setIsUserValid] = useState(true);
     const intl = useIntl();
+    const theme = useTheme();
 
     const validateName = (value) => {
         if (!value || value.trim() === '') {
@@ -90,10 +92,10 @@ const ResetThrottlePolicyDialog = (props) => {
                                                         + 'validated. Only a Policy Reset Request will be generated for the specified user'}
                                     />
                                 )}
-                                placement='right'
-                                style={{ marginLeft: '20px', maxWidth: 500 }}
+                                placement={theme.direction === 'rtl' ? 'left' : 'right'}
+                                style={{ marginInlineStart: '20px', maxWidth: 500 }}
                             >
-                                <IconButton style={{ marginLeft: '10px' }}>
+                                <IconButton style={{ marginInlineStart: '10px' }}>
                                     <InfoIcon />
                                 </IconButton>
                             </Tooltip>

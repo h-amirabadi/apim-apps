@@ -485,7 +485,7 @@ class LayoutLegacy extends React.Component {
                     </div>
                 )}
                 <Toaster
-                    position='bottom-right'
+                    position={theme.direction === 'rtl' ? 'bottom-left' : 'bottom-right'}
                     gutter={8}
                     toastOptions={{
                         style: {

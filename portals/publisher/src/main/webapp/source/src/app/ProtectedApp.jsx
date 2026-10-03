@@ -73,10 +73,25 @@ const DeferredAPIs = () => (
     </Suspense>
 );
 /**
+ * Resolve the active language consistently with the root Publisher component:
+ * the language saved by the switcher wins over the browser locale.
+ * @returns {string} active language key
+ */
+function resolveActiveLanguage() {
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage) {
+        return savedLanguage;
+    }
+    const browserLanguage = (navigator.languages && navigator.languages[0])
+        || navigator.language || navigator.userLanguage;
+    return browserLanguage.toLowerCase().split(/[_-]+/)[0];
+}
+
+/**
  * Language.
  * @type {string}
  */
-const language = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage;
+const language = resolveActiveLanguage();
 
 /**
  * Render protected application paths, Implements container presenter pattern

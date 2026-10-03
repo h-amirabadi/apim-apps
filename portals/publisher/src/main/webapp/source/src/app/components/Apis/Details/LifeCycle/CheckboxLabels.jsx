@@ -153,7 +153,7 @@ export default function CheckboxLabels(props) {
                                     to={getBasePath(api.apiType) + api.id + '/endpoints'}
                                     aria-label='Endpoint provided'
                                 >
-                                    <LaunchIcon style={{ marginLeft: '2px' }} color='primary' fontSize='small' />
+                                    <LaunchIcon style={{ marginInlineStart: '2px' }} color='primary' fontSize='small' />
                                 </Link>
                             </Grid>
                         )}
@@ -175,7 +175,11 @@ export default function CheckboxLabels(props) {
                                         to={urlPrefix + api.id + '/subscriptions'}
                                         aria-label='Business Plan(s)'
                                     >
-                                        <LaunchIcon style={{ marginLeft: '2px' }} color='primary' fontSize='small' />
+                                        <LaunchIcon
+                                            style={{ marginInlineStart: '2px' }}
+                                            color='primary'
+                                            fontSize='small'
+                                        />
                                     </Link>
                                 </Grid>
                             )}
@@ -196,7 +200,11 @@ export default function CheckboxLabels(props) {
                                         to={urlPrefix + api.id + '/runtime-configuration'}
                                         aria-label='Certificate provided'
                                     >
-                                        <LaunchIcon style={{ marginLeft: '2px' }} color='primary' fontSize='small' />
+                                        <LaunchIcon
+                                            style={{ marginInlineStart: '2px' }}
+                                            color='primary'
+                                            fontSize='small'
+                                        />
                                     </Link>
                                 </Grid>
                             ) }
@@ -214,7 +222,11 @@ export default function CheckboxLabels(props) {
                                         />
                                     </Typography>
                                     <Link to={urlPrefix + api.id + '/properties'} aria-label='Properties'>
-                                        <LaunchIcon style={{ marginLeft: '2px' }} color='primary' fontSize='small' />
+                                        <LaunchIcon
+                                            style={{ marginInlineStart: '2px' }}
+                                            color='primary'
+                                            fontSize='small'
+                                        />
                                     </Link>
                                 </Grid>
                             )}
