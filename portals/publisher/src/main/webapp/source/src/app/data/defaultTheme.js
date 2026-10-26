@@ -92,7 +92,7 @@ export default {
         background: {
             default: '#f6f6f6',
             paper: '#ffffff',
-            appBar: '#215088',
+            appBar: '#548056',
             appBarSelected: '#1d344f',
             leftMenu: '#1a1f2f',
             leftMenuActive: '#254061',

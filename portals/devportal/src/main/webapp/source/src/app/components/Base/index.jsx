@@ -97,7 +97,9 @@ const Root = styled('div')((
         [`& .${classes.appBar}`]: {
             position: 'fixed',
             backgroundColor: theme.custom.appBar.background,
-            backgroundImage: `url(${app.context}${theme.custom.appBar.backgroundImage})`,
+            backgroundImage: theme.custom.appBar.backgroundImage
+                ? `url(${app.context}${theme.custom.appBar.backgroundImage})`
+                : 'none',
             backgroundRepeat: 'no-repeat',
             direction: theme.direction,
         },

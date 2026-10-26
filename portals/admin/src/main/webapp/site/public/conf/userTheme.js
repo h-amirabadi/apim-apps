@@ -20,7 +20,7 @@ const AppThemes = {
             background: {
                 default: '#f6f6f6',
                 paper: '#ffffff',
-                appBar: '#1d344f',
+                appBar: '#548056',
             },
             charts: {
                 success: '#00B81D',

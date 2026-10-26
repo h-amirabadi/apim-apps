@@ -96,7 +96,7 @@ function Breadcrumbs(props) {
                 );
             } else {
                 breadcrumbElements.push(
-                    <Typography color='textPrimary' key={page.id}>{page.displayText}</Typography>,
+                    <Typography color='inherit' key={page.id}>{page.displayText}</Typography>,
                 );
             }
         });
