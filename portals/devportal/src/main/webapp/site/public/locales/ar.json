@@ -189,7 +189,7 @@
   "Base.Header.headersearch.HeaderSearch.tooltip.option6": "حسب العلامات [التركيب - العلامات: xxxx]",
   "Base.index.logo.alt": "بوابة التطوير",
   "Base.index.banner.alt": "شعار Dev Portal",
-  "Base.index.copyright.text": "WSO2 API-M v4.7.0 | © 2026 WSO2 LLC",
+  "Base.index.copyright.text": "",
   "Base.Header.headersearch.SearchUtils.lcState.published": "إنتاج",
   "Base.Header.headersearch.SearchUtils.lcState.prototyped": "النموذج",
   "Change.Password.password.change.disabled": "تم تعطيل تغيير كلمة المرور",

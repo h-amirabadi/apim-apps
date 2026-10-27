@@ -411,7 +411,7 @@
  "Base.Errors.ResourceNotFound.more.links": "می‌توانید پیوندهای زیر را بررسی کنید",
  "Base.Errors.ResourceNotfound.default_body": "صفحه‌ای که به دنبال آن می‌گردید در دسترس نیست",
  "Base.Errors.ResourceNotfound.default_tittle": "صفحه یافت نشد",
- "Base.Footer.Footer.product_details": "WSO2 API-M v4.7.0 | © 2026 WSO2 LLC",
+ "Base.Footer.Footer.product_details": "",
  "Base.Header.avatar.Avatar.logout": "خروج",
  "Base.RouteMenuMapping.advanced": "پیشرفته",
  "Base.RouteMenuMapping.advanced.throttling.policies": "خط‌مشی‌های پیشرفته",
