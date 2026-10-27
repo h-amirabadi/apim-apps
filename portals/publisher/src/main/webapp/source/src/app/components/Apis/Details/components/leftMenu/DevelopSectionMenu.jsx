@@ -69,13 +69,15 @@ const Root = styled('div')(({ theme }) => ({
             },
         },
         [`& .MuiAccordionSummary-root`]: {
-            backgroundColor: '#1a1f2f',
+            backgroundColor: '#061968',
+            // backgroundColor: '#1a1f2f',
             paddingLeft: '8px',
             borderBottom: '1px solid rgba(0, 0, 0, .125)',
             minHeight: 40,
         },
         [`& .MuiAccordionDetails-root`]: {
-            backgroundColor: '#1a1f2f',
+            backgroundColor: '#061968',
+            // backgroundColor: '#1a1f2f',
             paddingLeft: theme.spacing(0),
             paddingRight: theme.spacing(2),
             paddingTop: '0',

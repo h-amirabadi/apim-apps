@@ -22,7 +22,8 @@ const DefaultConfigurations = {
         background: {
             default: '#ffffff',
             paper: '#ffffff',
-            drawer: '#1a1f2f',
+            drawer: '#061968',
+            // drawer: '#1a1f2f',
         },
     },
     typography: {

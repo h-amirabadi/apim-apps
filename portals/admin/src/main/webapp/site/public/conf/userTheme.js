@@ -187,13 +187,15 @@ const AppThemes = {
             },
             MuiDrawer: {
                 paper: {
-                    backgroundColor: '#18202c',
+                    backgroundColor: '#061968',
+                    // backgroundColor: '#18202c',
                 },
             },
             MuiListItem: {
                 root: {
                     '&.itemCategory': {
-                        backgroundColor: '#232f3e',
+                        // backgroundColor: '#232f3e',
+                        backgroundColor: '#515d7b',
                         boxShadow: '0 -1px 0 #404854 inset',
                         paddingTop: 8,
                         paddingBottom: 8,

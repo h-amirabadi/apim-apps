@@ -309,7 +309,8 @@ class Listing extends Component {
                         })}
                         >
                             <CustomIcon
-                                strokeColor='#1a1f2f'
+                                strokeColor='#061968'
+                                // strokeColor='#1a1f2f'
                                 width={42}
                                 height={42}
                                 icon='applications'

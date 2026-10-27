@@ -24,7 +24,8 @@ export default {
     overrides: {
         MuiDrawer: {
             paper: {
-                backgroundColor: '#18202c',
+                backgroundColor: '#061968',
+                // backgroundColor: '#18202c',
             },
         },
         MuiButton: {
@@ -94,9 +95,11 @@ export default {
             paper: '#ffffff',
             appBar: '#548056',
             appBarSelected: '#1d344f',
-            leftMenu: '#1a1f2f',
+            leftMenu: '#061968',
+            // leftMenu: '#1a1f2f',
             leftMenuActive: '#254061',
-            drawer: '#1a1f2f',
+            drawer: '#061968',
+            // drawer: '#1a1f2f',
             activeMenuItem: '#254061',
             divider: '#000000',
         },
