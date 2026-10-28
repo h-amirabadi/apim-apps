@@ -64,7 +64,7 @@ function Footer() {
                         <Typography noWrap>
                             <FormattedMessage
                                 id='Base.Footer.Footer.product_details'
-                                defaultMessage=''
+                                defaultMessage='Hamgam Large-Scale Application Systems Company'
                             />
                         </Typography>
                     )}

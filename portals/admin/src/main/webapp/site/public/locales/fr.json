@@ -411,7 +411,7 @@
   "Base.Errors.ResourceNotFound.more.links": "You may check the links below",
   "Base.Errors.ResourceNotfound.default_body": "The page you are looking for is not available",
   "Base.Errors.ResourceNotfound.default_tittle": "Page Not Found",
-  "Base.Footer.Footer.product_details": "",
+  "Base.Footer.Footer.product_details": "Hamgam Large-Scale Application Systems Company",
   "Base.Header.avatar.Avatar.logout": "Logout",
   "Base.RouteMenuMapping.advanced": "Advanced",
   "Base.RouteMenuMapping.advanced.throttling.policies": "Advanced Policies",

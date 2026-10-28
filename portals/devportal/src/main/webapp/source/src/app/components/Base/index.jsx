@@ -770,7 +770,7 @@ class LayoutLegacy extends React.Component {
                                     {footerText && footerText !== '' ? <span>{footerText}</span> : (
                                         <FormattedMessage
                                             id='Base.index.copyright.text'
-                                            defaultMessage=''
+                                            defaultMessage='Hamgam Large-Scale Application Systems Company'
                                         />
                                     )}
                                 </Typography>

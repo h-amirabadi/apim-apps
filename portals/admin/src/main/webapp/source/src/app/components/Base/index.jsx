@@ -44,7 +44,7 @@ function Copyright() {
         <Typography variant='body2' color='textSecondary' align='center' sx={{ p: '16px' }}>
             <FormattedMessage
                 id='Base.Footer.Footer.product_details'
-                defaultMessage=''
+                defaultMessage='Hamgam Large-Scale Application Systems Company'
             />
         </Typography>
     );
