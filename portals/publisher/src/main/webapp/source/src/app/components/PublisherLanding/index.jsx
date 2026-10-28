@@ -23,7 +23,7 @@ import APILanding from 'AppComponents/Apis/Listing/Landing';
 import MCPServerLanding from 'AppComponents/MCPServers/Landing';
 import { useTheme, Box, Grid, Typography, IconButton } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import CustomIcon from 'AppComponents/Shared/CustomIcon';
 import API from 'AppData/api';
 import APIProduct from 'AppData/APIProduct';
@@ -144,6 +144,7 @@ const PublisherLanding = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const theme = useTheme();
+    const intl = useIntl();
     const { noDataIcon } = theme.custom.landingPage.icons;
     const { bgImages } = theme.custom.landingPage.summarySection;
     const { data: settings } = usePublisherSettings();
@@ -413,7 +414,12 @@ const PublisherLanding = () => {
                                 id='Publisher.Landing.title'
                                 defaultMessage='Welcome to the {portal}!'
                                 values={{
-                                    portal: <span style={{ fontWeight: '600' }}>Publisher Portal</span>,
+                                    portal: (
+                                        <span style={{ fontWeight: '600' }}>
+                                            {intl.formatMessage({ id: 'Publisher.Landing.portal.name',
+                                                defaultMessage: 'Publisher Portal' })}
+                                        </span>
+                                    ),
                                 }}
                             />
                         </Typography>

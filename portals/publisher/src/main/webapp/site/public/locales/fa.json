@@ -2437,6 +2437,7 @@
   "Publisher.Landing.summary.apiProducts": "محصولات API",
   "Publisher.Landing.summary.apis": "APIها",
   "Publisher.Landing.summary.mcpServers": "سرورهای MCP",
+  "Publisher.Landing.portal.name": "پورتال ناشر",
   "Publisher.Landing.title": "به {portal} خوش آمدید!",
   "Publisher.Landing.view.all.button": "مشاهده همه {entityType}",
   "Request.Details.Policies.PolicyList.Title": "درخواست",

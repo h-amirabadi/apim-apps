@@ -2436,6 +2436,7 @@
   "Publisher.Landing.no.apis.message.line2": "Create your first API to get started.",
   "Publisher.Landing.no.mcpServers.message.line1": "No MCP Servers found.",
   "Publisher.Landing.no.mcpServers.message.line2": "Create your first MCP Server to get started.",
+  "Publisher.Landing.portal.name": "Publisher Portal",
   "Publisher.Landing.summary.apiProducts": "API Products",
   "Publisher.Landing.summary.apis": "APIs",
   "Publisher.Landing.summary.mcpServers": "MCP Servers",
